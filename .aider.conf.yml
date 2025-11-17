@@ -19,7 +19,7 @@
 # Main moel:
 
 ## Specify the model to use for the main chat
-model: mistral/mistral-large-latest
+model: deepseek/deepseek-coder
 
 ########################
 # API Keys and settings:
@@ -48,8 +48,8 @@ model: mistral/mistral-large-latest
 ## Set an environment variable (to control API settings, can be used multiple times)
 #set-env: xxx
 ## Specify multiple values like this:
-set-env:
-- MISTRAL_API_KEY=
+# set-env:
+# - MISTRAL_API_KEY=
 #  - yyy
 #  - zzz
 
@@ -67,7 +67,7 @@ set-env:
 ## List known models which match the (partial) MODEL name
 #list-models: xxx
 
-## Specify a file with aider model settings for unknown models
+# Specify a file with aider model settings for unknown models
 #model-settings-file: .aider.model.settings.yml
 
 ## Specify a file with context window and costs for unknown models
@@ -76,8 +76,8 @@ set-env:
 ## Add a model alias (can be used multiple times)
 #alias: xxx
 ## Specify multiple values like this:
-#alias:
-#  - xxx
+alias:
+  - "r1:deepseek/deepseek-r1"
 #  - yyy
 #  - zzz
 
@@ -418,8 +418,7 @@ vim: true
 #config: xxx
 
 ## Specify the .env file to load (default: .env in git root)
-#env-file: .env
-
+env-file: /home/johnny/dotfiles/.env
 ## Enable/disable suggesting shell commands (default: True)
 #suggest-shell-commands: true
 
