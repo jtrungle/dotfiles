@@ -1,4 +1,3 @@
-
 ##########################################################
 # Sample .aider.conf.yml
 # This file lists *all* the valid configuration entries.
@@ -478,3 +477,21 @@ env-file: /home/johnny/dotfiles/.env
 
 ## Use o1-preview model for the main chat (deprecated, use --model)
 #o1-preview: false
+mcp-servers: |
+  {
+    "mcpServers": {
+      "chrome-devtools": { 
+        "type": "stdio", 
+        "command": "npx",  
+        "args": ["-y", "chrome-devtools-mcp@latest", "--browser-url=http://127.0.0.1:9222"]  
+      },
+    #   "sequential-thinking": {
+    #   "command": "npx",
+    #   "args": [
+    #     "-y",
+    #     "@modelcontextprotocol/server-sequential-thinking"
+    #   ]
+    # }
+
+    }
+  }
