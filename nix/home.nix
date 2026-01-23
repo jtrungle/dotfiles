@@ -1,11 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "johnny";
   home.homeDirectory = "/home/johnny";
 
   home.stateVersion = "24.05";
-
   # START SMALL
   home.packages = with pkgs; [
     ripgrep
@@ -21,6 +20,7 @@
     uv
     neovim
     opencode
+    inputs.try-cli.packages.${system}.default
   ];
   programs.zoxide = {
     enable = true;
