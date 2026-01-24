@@ -23,6 +23,7 @@
     visidata
     btop
     yazi
+    duckdb
     inputs.try-cli.packages.${system}.default
   ];
   programs.zoxide = {
