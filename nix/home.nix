@@ -20,6 +20,9 @@
     uv
     neovim
     opencode
+    visidata
+    btop
+    yazi
     inputs.try-cli.packages.${system}.default
   ];
   programs.zoxide = {
@@ -36,6 +39,7 @@
     shellAliases = {
       ls = "eza -l --icons --group-directories-first -a --git";
       hm = "nix run home-manager switch -- --flake /home/johnny/dotfiles/nix#johnny";
+      y = "yazi";
     };
     bashrcExtra = ''
         export PS1="\[$(tput setaf 33)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 105)\]\h \[$(tput setaf 141)\]\w \[$(tput sgr0)\]$ "
