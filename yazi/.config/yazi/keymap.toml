@@ -5,6 +5,7 @@
 [mgr]
 
 prepend_keymap = [
+  { on = [ "g", "s" ], run  = "cd sftp://my-server", desc = "Go to my-server"},
   { on = "H", run = "plugin duckdb -1", desc = "Scroll one column to the left" },
   { on = "L", run = "plugin duckdb +1", desc = "Scroll one column to the right" },
   { on = [

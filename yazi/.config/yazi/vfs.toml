@@ -1,0 +1,6 @@
+[services.my-server]
+type = "sftp"
+host = "192.168.50.232"
+user = "johnny"
+port = 22
+key_file = "~/.ssh/id_ed25519"
