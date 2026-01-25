@@ -60,8 +60,15 @@ download = [
   { run = "ya emit download --open %S", desc = "Download and open" },
   { run = "ya emit download %S", desc = "Download" },
 ]
-
+vd = [{ run = "vd %s", block = true, desc = "VisiData" }]
 [open]
+prepend_rules = [
+  { url = "*.csv", use = "vd" },
+  { url = "*.tsv", use = "vd" },
+  { url = "*.xlsx", use = "vd" },
+  { url = "*.xls", use = "vd" },
+  { url = "*.db", use = "vd" },
+]
 rules = [
   # Folder
   { url = "*/", use = [
@@ -122,23 +129,19 @@ suppress_preload = false
 
 [plugin]
 prepend_previewers = [
-  { mime = "text/csv", run = "duckdb" },
-  { mime = "text/tab-separated-values", run = "duckdb" },
-  { mime = "application/json", run = "duckdb" },
-  { mime = "application/vnd.apache.parquet", run = "duckdb" },
-  { mime = "text/plain", run = "duckdb" },
-  { mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", run = "duckdb" },
-  { mime = "application/octet-stream", run = "duckdb" } # .db / .duckdb
+  {url = "*.csv", run = "duckdb" },
+  {url = "*.tsv", run = "duckdb" },
+  {url = "*.parquet", run = "duckdb" },
+  {url = "*.xlsx", run = "duckdb" },
+  {url = "*.db", run = "duckdb" },                                          # .db / .duckdb
 ]
 
 prepend_preloaders = [
-  { mime = "text/csv", run = "duckdb", multi = false },
-  { mime = "text/tab-separated-values", run = "duckdb", multi = false },
-  { mime = "application/json", run = "duckdb", multi = false },
-  { mime = "application/vnd.apache.parquet", run = "duckdb", multi = false },
-  { mime = "text/plain", run = "duckdb", multi = false },
-  { mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", run = "duckdb", multi = false },
-  { mime = "application/octet-stream", run = "duckdb", multi = false }
+  { url = "*.csv", run = "duckdb", multi = false },
+  { url = "*.tsv", run = "duckdb", multi = false },
+  { url = "*.parquet", run = "duckdb", multi = false },
+  { url = "*.xlsx", run = "duckdb", multi = false },
+  { url = "*.db", run = "duckdb", multi = false },
 ]
 fetchers = [
   # Mimetype
@@ -284,4 +287,3 @@ sort_by = "none"
 sort_sensitive = false
 sort_reverse = false
 sort_translit = false
-
