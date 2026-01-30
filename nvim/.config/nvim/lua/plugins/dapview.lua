@@ -10,7 +10,7 @@ return {
           windows = {
             position = "right",
             terminal = {
-              position = "below",
+              position = "above",
             },
           },
         },
