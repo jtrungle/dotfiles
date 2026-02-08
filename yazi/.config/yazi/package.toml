@@ -3,5 +3,7 @@ use = "wylie102/duckdb"
 rev = "3f8c863"
 hash = "87b9233a74325e95011670ed20bbd0d4"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "hankertrix/bluloco-yazi:bluloco-dark"
+rev = "dc47a6d"
+hash = "aaa55b7bf1fa60e9da0df36e0771b610"

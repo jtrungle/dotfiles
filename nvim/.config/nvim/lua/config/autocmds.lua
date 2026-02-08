@@ -22,3 +22,6 @@ vim.api.nvim_create_autocmd("FileType", {
     end
   end,
 })
+
+vim.api.nvim_set_hl(0, "SnacksPickerPathHidden", { link = "Text" })
+vim.api.nvim_set_hl(0, "SnacksPickerDir", { link = "Text" })
