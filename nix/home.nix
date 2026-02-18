@@ -24,6 +24,7 @@
     btop
     yazi
     duckdb
+    bat
     inputs.try-cli.packages.${system}.default
   ];
   programs.zoxide = {

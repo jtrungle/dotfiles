@@ -1,0 +1,47 @@
+{
+  "View": {
+    "prefix": "deview",
+    "body": [
+      "from de_data_capture_app.core.base.view import BaseView",
+      "from nicegui import ui",
+      "",
+      "class ${1:name}View(BaseView):",
+      "    def build(self):",
+      "        pass",
+      "        $0"
+    ],
+    "description": "View class with build method"
+  },
+  "ViewModel": {
+    "prefix": "devm",
+    "body": [
+      "from de_data_capture_app.core.base.viewmodel import BaseViewModel",
+      "",
+      "class ${1:name}ViewModel(BaseViewModel):",
+      "    def init(self):",
+      "        pass",
+      "        $0",
+      "",
+      "    def dispose(self):",
+      "        pass",
+      "",
+      "    def validate(self):",
+      "        pass"
+    ],
+    "description": "View class with build method"
+  },
+  "Model": {
+    "prefix": "demo",
+    "body": [
+
+      "from de_data_capture_app.core.base.model import BaseModel",
+      "from nicegui import binding",
+
+      "",
+      "@binding.bindable_dataclass",
+      "class ${1:name}Model(BaseModel):",
+      "        $0"
+    ],
+    "description": "Model class with bindable dataclass"
+  }
+}

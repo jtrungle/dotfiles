@@ -25,6 +25,12 @@
           "python"
         ],
         "path": "snippets/opens.json"
+      },
+      {
+        "language": [
+          "python"
+        ],
+        "path": "snippets/mvvm.json"
       }
     ]
   }

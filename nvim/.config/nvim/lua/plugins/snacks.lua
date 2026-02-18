@@ -5,23 +5,23 @@ return {
       picker = {
         -- globally show hidden/ignored
         hidden = true,
-        ignored = true,
+        ignored = false,
         -- per-source overrides
         sources = {
           files = {
             hidden = true,
-            ignored = true,
+            ignored = false,
           },
           explorer = {
             hidden = true,
-            ignored = true,
+            ignored = false,
           },
         },
       },
       explorer = {
         -- optional: other settings for the tree if you use it
         hidden = true,
-        ignored = true,
+        ignored = false,
       },
     },
   },
