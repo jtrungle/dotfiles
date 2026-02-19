@@ -1,5 +1,5 @@
 return {
-  "Willem-J-an/visidata.nvim",
+  "jtrungle/visidata.nvim",
   dependencies = {
     "mfussenegger/nvim-dap",
     "rcarriga/nvim-dap-ui",
