@@ -123,3 +123,7 @@ vim.keymap.set(
   "<cmd>GitLink! current_branch<cr>",
   { silent = true, noremap = true, desc = "Open current branch link" }
 )
+
+vim.keymap.set("n", "<leader>wb", function()
+  vim.wo.winfixbuf = not vim.wo.winfixbuf
+end, { desc = "Toggle winfixbuf for window" })
