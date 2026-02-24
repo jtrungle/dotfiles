@@ -15,6 +15,13 @@ return {
           explorer = {
             hidden = true,
             ignored = false,
+            win={
+              list={
+                keys={
+                  ["O"] = { { "pick_win", "jump" }, mode = { "n", "i" } },
+                }
+              }
+            }
           },
         },
       },
