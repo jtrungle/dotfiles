@@ -127,3 +127,9 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>wb", function()
   vim.wo.winfixbuf = not vim.wo.winfixbuf
 end, { desc = "Toggle winfixbuf for window" })
+
+vim.api.nvim_create_user_command(
+  "JqFormat",
+  "%!jq .",
+  { desc = "Format buffer with jq" }
+)

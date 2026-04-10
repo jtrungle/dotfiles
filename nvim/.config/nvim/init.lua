@@ -6,3 +6,4 @@ vim.api.nvim_create_user_command("ReloadSnippets", function()
   require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/my-snippets" } })
   vim.notify("Snippets reloaded!")
 end, {})
+

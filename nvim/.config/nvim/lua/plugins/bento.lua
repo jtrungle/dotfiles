@@ -1,5 +1,6 @@
 return {
   "serhez/bento.nvim",
+  enabled=false,
   opts = {
     ui = {
       floating = {

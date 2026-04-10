@@ -2,7 +2,7 @@
   "View": {
     "prefix": "deview",
     "body": [
-      "from de_data_capture_app.core.base.view import BaseView",
+      "from de_data_capture_app.base.view import BaseView",
       "from nicegui import ui",
       "",
       "class ${1:name}View(BaseView):",
@@ -15,7 +15,7 @@
   "ViewModel": {
     "prefix": "devm",
     "body": [
-      "from de_data_capture_app.core.base.viewmodel import BaseViewModel",
+      "from de_data_capture_app.base.viewmodel import BaseViewModel",
       "",
       "class ${1:name}ViewModel(BaseViewModel):",
       "    def init(self):",
@@ -34,7 +34,7 @@
     "prefix": "demo",
     "body": [
 
-      "from de_data_capture_app.core.base.model import BaseModel",
+      "from de_data_capture_app.base.model import BaseModel",
       "from nicegui import binding",
 
       "",
