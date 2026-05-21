@@ -1,0 +1,51 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "shadcn": {
+      "type": "local",
+      "enabled": false,
+      "command": ["npx", "shadcn@latest", "mcp"],
+    },
+    "taiga-ui": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "@taiga-ui/mcp@latest",
+        "--source-url=https://taiga-ui.dev/llms-full.txt", // or file from "/next" version, if you want
+      ],
+    },
+    "angular": {
+      "type": "local",
+      "enabled": false,
+      "command": ["npx", "-y", "@angular/cli", "mcp"],
+    },
+    "supabase": {
+      "type": "local",
+      "enabled": false,
+      "command": ["npx", "-y", "mcp-remote", "http://localhost:54321/mcp"],
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "chrome-devtools-mcp@latest",
+        "--headless=true",
+        "--isolated=true",
+      ],
+    },
+    "ddg-search": {
+      "type": "local",
+      "command": ["uvx","duckduckgo-mcp-server"],
+    },
+    "stripe": {
+      "type": "remote",
+      "enabled": false,
+      "url": "https://mcp.stripe.com",
+      "headers": {
+        "Authorization": "Bearer ",
+      },
+    },
+  },
+}
