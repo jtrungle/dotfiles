@@ -25,7 +25,9 @@
     yazi
     duckdb
     bat
+    lazysql
     inputs.try-cli.packages.${system}.default
+    rquickshare
   ];
   programs.zoxide = {
     enable = true;
@@ -42,6 +44,8 @@
       ls = "eza -l --icons --group-directories-first -a --git";
       hm = "nix run home-manager switch -- --flake /home/johnny/dotfiles/nix#johnny";
       y = "yazi";
+      ae = "source .venv/bin/activate";
+      de = "deactivate";
     };
     bashrcExtra = ''
         export PS1="\[$(tput setaf 33)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 105)\]\h \[$(tput setaf 141)\]\w \[$(tput sgr0)\]$ "
@@ -49,6 +53,9 @@
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
         eval "$(fzf --bash)"
+        source ~/.global.env
+        export PATH=$PATH:$HOME/go/bin
+        eval "$(try init ~/src/tries)"
         '' ;
   };
   home.sessionPath = [

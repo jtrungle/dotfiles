@@ -3,3 +3,6 @@
 -- Add any additional options here
 vim.o.tabstop = 4
 vim.g.autoformat = false
+if vim.fn.has("wsl") == 1 then
+  vim.opt.clipboard = ""
+end

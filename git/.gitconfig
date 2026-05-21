@@ -1,0 +1,10 @@
+[user]
+	email = johnny.le@droneshield.com
+	name = Johnny Le
+[core]
+	excludesfile = /home/johnny/.gitignore_global
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

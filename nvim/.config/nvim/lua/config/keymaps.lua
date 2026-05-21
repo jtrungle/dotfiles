@@ -133,3 +133,12 @@ vim.api.nvim_create_user_command(
   "%!jq .",
   { desc = "Format buffer with jq" }
 )
+vim.keymap.set("n", "<leader>Ce", function()
+  if vim.opt.clipboard:get()[1] == "unnamedplus" then
+    vim.opt.clipboard = ""
+    vim.notify("Clipboard disabled", vim.log.levels.INFO)
+  else
+    vim.opt.clipboard = "unnamedplus"
+    vim.notify("Clipboard = unnamedplus", vim.log.levels.INFO)
+  end
+end, { desc = "Toggle system clipboard" })
