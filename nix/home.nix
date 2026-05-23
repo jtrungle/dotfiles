@@ -19,7 +19,6 @@
     eza
     uv
     neovim
-    opencode
     visidata
     btop
     yazi
@@ -42,7 +41,7 @@
     enable = true;
     shellAliases = {
       ls = "eza -l --icons --group-directories-first -a --git";
-      hm = "nix run home-manager switch -- --flake /home/johnny/dotfiles/nix#johnny";
+      hm = "home-manager switch --flake ~/dotfiles/nix#johnny";
       y = "yazi";
       ae = "source .venv/bin/activate";
       de = "deactivate";
@@ -56,6 +55,7 @@
         source ~/.global.env
         export PATH=$PATH:$HOME/go/bin
         eval "$(try init ~/src/tries)"
+        export PATH=/home/johnny/.opencode/bin:$PATH
         '' ;
   };
   home.sessionPath = [
