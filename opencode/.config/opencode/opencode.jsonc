@@ -37,7 +37,7 @@
     },
     "ddg-search": {
       "type": "local",
-      "command": ["uvx","duckduckgo-mcp-server"],
+      "command": ["uvx", "duckduckgo-mcp-server"],
     },
     "stripe": {
       "type": "remote",
@@ -46,6 +46,11 @@
       "headers": {
         "Authorization": "Bearer ",
       },
+    },
+    "flet-mcp": {
+      "type": "local",
+      "command": ["uvx", "flet-mcp-server"],
+      "enabled": true,
     },
   },
 }
