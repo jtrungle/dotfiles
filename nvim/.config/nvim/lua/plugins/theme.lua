@@ -7,22 +7,27 @@ return {
 
     config = function()
       require("cyberdream").setup({
-        transparent = true
+        transparent = true,
       })
-    end
+    end,
   },
   {
     "navarasu/onedark.nvim",
     config = function()
-      require('onedark').setup {
-        style = 'dark'
-      }
-      require('onedark').load()
-    end
+      require("onedark").setup({
+        style = "dark",
+      })
+      require("onedark").load()
+    end,
   },
   {
     "eldritch-theme/eldritch.nvim",
   },
+  {
+    "srcery-colors/srcery-vim",
+  },
+  {'sainnhe/everforest'},
+  {'ayu-theme/ayu-vim'},
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
@@ -38,12 +43,12 @@ return {
       require("themery").setup({
         themes = {
           {
-          name = "cyberdream",
-          colorscheme = "cyberdream",
+            name = "cyberdream",
+            colorscheme = "cyberdream",
           },
           {
-          name = "eldritch",
-          colorscheme = "eldritch",
+            name = "eldritch",
+            colorscheme = "eldritch",
           },
           {
             name = "synthweave",
@@ -56,10 +61,24 @@ return {
           {
             name = "moonfly",
             colorscheme = "moonfly",
-          }
+          },
+          {
+            name = "srcery-vim",
+            colorscheme = "srcery",
+          },
+
+          {
+            name = "ayu",
+            colorscheme = "ayu",
+          },
+
+          {
+            name = "everforest",
+            colorscheme = "everforest",
+          },
         },
         -- add the config here
       })
-    end
-  }
+    end,
+  },
 }

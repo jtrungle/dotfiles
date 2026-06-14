@@ -52,7 +52,9 @@
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
         eval "$(fzf --bash)"
+        set -a
         source ~/.global.env
+        set +a
         export PATH=$PATH:$HOME/go/bin
         eval "$(try init ~/src/tries)"
         export PATH=/home/johnny/.opencode/bin:$PATH

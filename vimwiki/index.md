@@ -4,3 +4,7 @@ My Index
 
 
 [Secrets](Secrets)
+
+[Snips](Snips)
+
+[Agent work 0611](Agent work 0611)

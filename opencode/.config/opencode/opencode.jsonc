@@ -52,5 +52,16 @@
       "command": ["uvx", "flet-mcp-server"],
       "enabled": true,
     },
-  },
+    "postgres": {
+      "type": "local",
+      "enabled" :true,
+      "command": ["uvx",
+        "postgres-mcp",
+        "--access-mode=restricted"
+      ],
+      "environment": {
+        "DATABASE_URI": "{env:SCENARIO_DB_URL}"
+      }
+    }
+  }
 }
