@@ -27,6 +27,9 @@
     lazysql
     inputs.try-cli.packages.${system}.default
     rquickshare
+    sshfs
+    tmux
+    remmina
   ];
   programs.zoxide = {
     enable = true;
@@ -59,6 +62,9 @@
         eval "$(try init ~/src/tries)"
         export PATH=/home/johnny/.opencode/bin:$PATH
         export PATH="/home/johnny/develop/flutter/bin:$PATH"
+        export PATH="$HOME/.cargo/bin:$PATH"
+        export BUN_INSTALL="$HOME/.bun"
+        export PATH="$BUN_INSTALL/bin:$PATH"
         '' ;
   };
   home.sessionPath = [
