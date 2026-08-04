@@ -25,6 +25,13 @@
       "enabled": false,
       "command": ["npx", "-y", "mcp-remote", "http://localhost:54321/mcp"],
     },
+
+    "highcharts": {
+      "type": "remote",
+      "enabled": true,
+      "url": "https://mcp.highcharts.ai/developers/mcp",
+    },
+
     "chrome-devtools": {
       "type": "local",
       "enabled": true,
@@ -54,14 +61,11 @@
     },
     "postgres": {
       "type": "local",
-      "enabled" :true,
-      "command": ["uvx",
-        "postgres-mcp",
-        "--access-mode=restricted"
-      ],
+      "enabled": true,
+      "command": ["uvx", "postgres-mcp", "--access-mode=restricted"],
       "environment": {
-        "DATABASE_URI": "{env:SCENARIO_DB_URL}"
-      }
-    }
-  }
+        "DATABASE_URI": "{env:SCENARIO_DB_URL}",
+      },
+    },
+  },
 }
