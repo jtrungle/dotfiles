@@ -58,6 +58,7 @@
         export PATH=$PATH:$HOME/go/bin
         eval "$(try init ~/src/tries)"
         export PATH=/home/johnny/.opencode/bin:$PATH
+        export PATH="/home/johnny/develop/flutter/bin:$PATH"
         '' ;
   };
   home.sessionPath = [
