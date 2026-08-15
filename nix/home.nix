@@ -30,6 +30,8 @@
     sshfs
     tmux
     remmina
+    just
+    typst
   ];
   programs.zoxide = {
     enable = true;
