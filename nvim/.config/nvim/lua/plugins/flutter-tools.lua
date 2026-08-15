@@ -4,7 +4,7 @@ return {
     "nvim-lua/plenary.nvim",
     "stevearc/dressing.nvim",
   },
-  enabled = false,
+  enabled = true,
   config = function()
     require("flutter-tools").setup({
       widget_guides = {

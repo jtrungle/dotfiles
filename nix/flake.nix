@@ -15,7 +15,7 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
   in {
-    homeConfigurations.johnny = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.jle = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inputs = {try-cli = try-cli; }; }; # pass flake inputs
       modules = [

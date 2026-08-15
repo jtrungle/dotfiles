@@ -1,8 +1,8 @@
 { config, pkgs, inputs, ... }:
 
 {
-  home.username = "johnny";
-  home.homeDirectory = "/home/johnny";
+  home.username = "jle";
+  home.homeDirectory = "/home/jle";
 
   home.stateVersion = "24.05";
   # START SMALL
@@ -46,26 +46,31 @@
     enable = true;
     shellAliases = {
       ls = "eza -l --icons --group-directories-first -a --git";
-      hm = "home-manager switch --flake ~/dotfiles/nix#johnny";
+      hm = "nix run home-manager switch -- --flake /home/jle/dotfiles/nix#jle";
       y = "yazi";
       ae = "source .venv/bin/activate";
       de = "deactivate";
       whatssh = "cat ~/.ssh/config";
     };
     bashrcExtra = ''
+	source ~/.local/share/omarchy/default/bash/rc
         export PS1="\[$(tput setaf 33)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 105)\]\h \[$(tput setaf 141)\]\w \[$(tput sgr0)\]$ "
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
         eval "$(fzf --bash)"
         set -a
-        source ~/.global.env
+        # source ~/.global.env
         set +a
         export PATH=$PATH:$HOME/go/bin
         eval "$(try init ~/src/tries)"
-        export PATH=/home/johnny/.opencode/bin:$PATH
+        export PATH=/home/jle/.opencode/bin:$PATH
+        export PATH="/home/jle/develop/flutter/bin:$PATH"
         export PATH="$HOME/.cargo/bin:$PATH"
-        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+        export BUN_INSTALL="$HOME/.bun"
+        export PATH="$BUN_INSTALL/bin:$PATH"
+        export CHROME_EXECUTABLE=/usr/bin/chromium
+        export PATH="$PATH:$HOME/develop/android-studio/platform-tools"
         '' ;
   };
   home.sessionPath = [
