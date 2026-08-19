@@ -25,3 +25,11 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.api.nvim_set_hl(0, "SnacksPickerPathHidden", { link = "Text" })
 vim.api.nvim_set_hl(0, "SnacksPickerDir", { link = "Text" })
+
+vim.ui.open = function(path)
+  if vim.fn.has("wsl") == 1 then
+    vim.fn.jobstart({"cmd.exe", "/c", "start", "", path }, { detach = true })
+  else
+    vim.fn.jobstart({ "xdg-open", path }, { detach = true })
+  end
+end

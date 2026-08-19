@@ -1,5 +1,5 @@
 return {
-  "lalitmee/browse.nvim",
+  "jtrungle/browse.nvim",
   dependencies = { "nvim-telescope/telescope.nvim" },
   keys = {
     {

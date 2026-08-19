@@ -50,6 +50,7 @@
       y = "yazi";
       ae = "source .venv/bin/activate";
       de = "deactivate";
+      whatssh = "cat ~/.ssh/config";
     };
     bashrcExtra = ''
         export PS1="\[$(tput setaf 33)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 105)\]\h \[$(tput setaf 141)\]\w \[$(tput sgr0)\]$ "
@@ -63,10 +64,8 @@
         export PATH=$PATH:$HOME/go/bin
         eval "$(try init ~/src/tries)"
         export PATH=/home/johnny/.opencode/bin:$PATH
-        export PATH="/home/johnny/develop/flutter/bin:$PATH"
         export PATH="$HOME/.cargo/bin:$PATH"
-        export BUN_INSTALL="$HOME/.bun"
-        export PATH="$BUN_INSTALL/bin:$PATH"
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
         '' ;
   };
   home.sessionPath = [

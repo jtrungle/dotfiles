@@ -6,3 +6,5 @@ vim.g.autoformat = false
 if vim.fn.has("wsl") == 1 then
   vim.opt.clipboard = ""
 end
+vim.opt.title = true
+vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
