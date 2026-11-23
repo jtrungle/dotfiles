@@ -32,6 +32,8 @@
     remmina
     just
     typst
+    pass
+    sshm
   ];
   programs.zoxide = {
     enable = true;
@@ -50,7 +52,9 @@
       y = "yazi";
       ae = "source .venv/bin/activate";
       de = "deactivate";
-      whatssh = "cat ~/.ssh/config";
+      whatssh = "bat ~/.ssh/config -p";
+      whatsshkey = "cat ~/.ssh/id_ed25519.pub";
+      essh = "nvim ~/.ssh/config";
     };
     bashrcExtra = ''
         export PS1="\[$(tput setaf 33)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 105)\]\h \[$(tput setaf 141)\]\w \[$(tput sgr0)\]$ "
